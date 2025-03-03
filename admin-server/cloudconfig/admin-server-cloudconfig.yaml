@@ -4,11 +4,11 @@ spring:
       resourceserver:
         jwt:
           issuer-uri:
-            issuer-uri: http://host.docker.internal:8082/realms/selmag
+            issuer-uri: http://172.17.0.1:8082/realms/selmag
       client:
         provider:
           keycloak:
-            issuer-uri: http://host.docker.internal:8082/realms/selmag
+            issuer-uri: http://172.17.0.1:8082/realms/selmag
 
         registration:
           keycloak:
