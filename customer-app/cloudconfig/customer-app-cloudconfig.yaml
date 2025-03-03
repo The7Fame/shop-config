@@ -1,9 +1,11 @@
 selmag:
   services:
     catalogue:
-      uri: lb://catalogue-service
+#      uri: lb://catalogue-service
+      uri: http://catalogue:8001
     feedback:
-      uri: lb://feedback-service
+      uri: http://feedback:8003
+#      uri: lb://feedback-service
 
 spring:
   boot:
@@ -35,7 +37,7 @@ spring:
             authorization-grant-type: client_credentials
             scope:
               - metrics_server
-              -
+
 management:
   health:
     livenessstate:
@@ -57,6 +59,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.17.0.1:8761/eureka/
   instance:
     prefer-ip-address: true

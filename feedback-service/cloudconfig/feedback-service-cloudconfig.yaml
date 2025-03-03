@@ -6,7 +6,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27018/feedback
+      uri: mongodb://mongodb:27018/feedback
   security:
     oauth2:
       resourceserver:
@@ -39,7 +39,7 @@ springdoc:
       use-pkce-with-authorization-code-grant: true
 
 keycloak:
-  uri: http://localhost:8082
+  uri: http://172.17.0.1:8082
 
 management:
   health:
@@ -62,6 +62,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.17.0.1:8761/eureka/
   instance:
     prefer-ip-address: true
