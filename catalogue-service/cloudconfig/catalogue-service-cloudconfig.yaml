@@ -4,7 +4,7 @@ spring:
       client:
         enabled: false
   datasource:
-    url: jdbc:postgresql://db_catalogue:5433/store
+    url: jdbc:postgresql://db_catalogue:5432/store
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
