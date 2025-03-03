@@ -4,7 +4,7 @@ spring:
       client:
         enabled: false
   datasource:
-    url: jdbc:postgresql://localhost:5433/store
+    url: jdbc:postgresql://db_catalogue:5433/store
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -38,7 +38,7 @@ logging:
     sql: info
 
 keycloak:
-  uri: http://localhost:8082
+  uri: http://172.17.0.1:8082
 
 springdoc:
   swagger-ui:
@@ -66,6 +66,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.17.0.1:8761/eureka/
   instance:
     prefer-ip-address: true
