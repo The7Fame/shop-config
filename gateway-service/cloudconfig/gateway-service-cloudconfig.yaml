@@ -8,11 +8,11 @@ spring:
     gateway:
       routes:
         - id: catalogue-service-route
-          uri: lb://catalogue-service
+          uri: lb://manager-app
           predicates:
             - Path=/catalogue/**
         - id: feedback-service-route
-          uri: lb://feedback-service
+          uri: lb://customer-app
           predicates:
             - Path=/customer/**
 
