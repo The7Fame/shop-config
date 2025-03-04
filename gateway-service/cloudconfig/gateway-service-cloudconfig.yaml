@@ -1,6 +1,4 @@
-sping:
-  application:
-    name: gateway-service
+spring:
   boot:
     admin:
       client:
