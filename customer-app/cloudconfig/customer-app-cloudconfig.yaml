@@ -1,11 +1,11 @@
 selmag:
   services:
     catalogue:
-#      uri: lb://catalogue-service
-      uri: http://catalogue:8001
+      uri: lb://catalogue-service
+#      uri: http://catalogue:8001
     feedback:
-      uri: http://feedback:8003
-#      uri: lb://feedback-service
+#      uri: http://feedback:8003
+      uri: lb://feedback-service
 
 spring:
   boot:

@@ -1,0 +1,27 @@
+sping:
+  application:
+    name: gateway-service
+  boot:
+    admin:
+      client:
+        enabled: false
+
+  cloud:
+    gateway:
+      routes:
+        - id: catalogue-service-route
+          uri: lb://catalogue-service
+          predicates:
+            - Path=/catalogue/**
+        - id: feedback-service-route
+          uri: lb://feedback-service
+          predicates:
+            - Path=/customer/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.17.0.1:8761/eureka/
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true

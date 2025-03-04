@@ -1,8 +1,8 @@
 selmag:
   services:
     catalogue:
-#      uri: lb://catalogue-service
-      uri: http://catalogue:8001
+      uri: lb://catalogue-service
+#      uri: http://catalogue:8001
       registration-id: keycloak
 
 spring:
